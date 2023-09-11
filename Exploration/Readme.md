@@ -1,6 +1,6 @@
 # Exploration Project Repository입니다.
 # AIFFEL Campus Online 4th Code Peer Review Templete
-- 코더 : 코더 1인의 이름을 작성하세요.
+- 코더 : 이윤상
 - 리뷰어 : 본인의 이름을 작성하세요.
 
 
@@ -23,22 +23,7 @@
 2. 코드의 작동 방식에 대한 개선 방법을 주석으로 기록합니다.
 3. 참고한 링크 및 ChatGPT 프롬프트 명령어가 있다면 주석으로 남겨주세요.
 ```python
-# 사칙 연산 계산기
-class calculator:
-    # 예) init의 역할과 각 매서드의 의미를 서술
-    def __init__(self, first, second):
-        self.first = first
-        self.second = second
-    
-    # 예) 덧셈과 연산 작동 방식에 대한 서술
-    def add(self):
-        result = self.first + self.second
-        return result
 
-a = float(input('첫번째 값을 입력하세요.')) 
-b = float(input('두번째 값을 입력하세요.')) 
-c = calculator(a, b)
-print('덧셈', c.add()) 
 ```
 
 # 참고 링크 및 코드 개선
