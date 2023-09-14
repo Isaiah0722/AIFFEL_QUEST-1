@@ -108,6 +108,33 @@
                 print("추상 요약 :", textSummary(data_summa['text'][i]))
                 print("추출 요약 :", summarize(data_summa['text'][i], ratio=0.3))
                 print("\n")
+
+          ...
+
+          results = []
+
+            for i in range(50, 100):
+                original_text = seq2text(encoder_input_test[i])
+                actual_summary = seq2headlines(decoder_input_test[i])
+                abstract_summary = decode_sequence(encoder_input_test[i].reshape(1, text_max_len))
+                extractive_summary = summarize(data_summa['text'][i], ratio=0.5)
+            
+                results.append({
+                    original_text,
+                    actual_summary,
+                    abstract_summary,
+                    extractive_summary
+                })
+            
+            df = pd.DataFrame(results)
+            df.head()
+            0	1	2	3
+            0	Former Finance Minister Yashwant Sinha on Tues...	trump son obama meet us open	us president donald trump youngest son barron ...	trump son plays football white house arsenal kit
+            1	growing trees reduce atmospheric carbon dioxid...	use use use water fuel prices	Boeing retained its position as the world's la...	planting trees substitute cutting co emissions...
+            2	ceo loses billion tax ceo		seriously underpaid says ryanair ceo	low cost airline ryanair ceo michael made mill...
+            3	singapore demands lakh indians	boeing airbus group supplier fined investigati...	Further, its OnePlus 6 emerged as the highest ...	boeing supplier fined cr discrimination muslims
+            4	Filmmaker Pooja Bhatt, while talking about the...	tamil nadu health department wednesday launche...	tamil nadu hospital doctors remove nipah virus	tamil nadu starts free breast implants poor
+
           ```
     
 - [x]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
